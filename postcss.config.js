@@ -1,6 +1,7 @@
-module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-}
+export default {
+    parser: 'postcss-scss',
+    plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+    },
+};
