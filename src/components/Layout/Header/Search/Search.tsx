@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import './Search.scss';
 import { isEmpty } from 'lodash';
 function Search() {
@@ -13,12 +13,12 @@ function Search() {
         isEmpty(searchValue) && setPlaceholder('____');
     }
 
-    function handleChange(e) {
+    function handleChange(e: ChangeEvent<HTMLInputElement>) {
         setSearchValue(e.target.value);
     }
 
     return (
-        <form className="search rounded-[5px] h-[30px] mr-[10px]">
+        <form className="bg-[#fff] search rounded-[5px] h-[30px] mr-[10px]">
             <input
                 id="search-input"
                 value={searchValue}
@@ -28,7 +28,7 @@ function Search() {
                 onBlur={handleBlur}
                 onChange={handleChange}
             />
-            <button className="search-btn " disabled={isEmpty(searchValue)}></button>
+            <button className="search-btn cursor-pointer" disabled={isEmpty(searchValue)}></button>
         </form>
     );
 }

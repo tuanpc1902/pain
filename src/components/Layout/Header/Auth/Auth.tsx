@@ -2,6 +2,7 @@ import { Button, Space } from 'antd';
 import { useState } from 'react';
 import SignInModal from '../../../Modal/SignInModal';
 import SignUpModal from '../../../Modal/SignUpModal';
+import './Auth.scss';
 
 function Auth() {
     const [openModalSignIn, setOpenModalSignIn] = useState(false);
@@ -16,13 +17,13 @@ function Auth() {
     }
 
     return (
-        <Space>
-            <Button type="text" className="text-black font-semibold" onClick={toggleModalSignIn}>
+        <Space id="header-auth">
+            <Button type="text" className="sign-in-btn text-[#fff] font-semibold" onClick={toggleModalSignIn}>
                 Sign in
             </Button>
             <Button
                 type="text"
-                className="text-black bg-slate-300 hover:bg-slate-900 font-semibold"
+                className="sign-up-btn text-[#fff] bg-[#0094ac] hover:bg-slate-900 font-semibold"
                 onClick={toggleModalSignUp}
             >
                 Sign up for free

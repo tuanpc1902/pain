@@ -25,10 +25,10 @@ function SignInModal({ open, setOpen }: SignInModalProps) {
                 className="pt-10"
                 name="basic"
                 labelCol={{
-                    span: 8,
+                    span: 6,
                 }}
                 wrapperCol={{
-                    span: 12,
+                    span: 16,
                 }}
                 style={{
                     maxWidth: 600,
@@ -81,8 +81,8 @@ function SignInModal({ open, setOpen }: SignInModalProps) {
                     name="remember"
                     valuePropName="checked"
                     wrapperCol={{
-                        offset: 8,
-                        span: 20,
+                        offset: 6,
+                        span: 18,
                     }}
                 >
                     <Checkbox>Remember me</Checkbox>
@@ -90,8 +90,8 @@ function SignInModal({ open, setOpen }: SignInModalProps) {
 
                 <Form.Item
                     wrapperCol={{
-                        offset: 8,
-                        span: 20,
+                        offset: 6,
+                        span: 18,
                     }}
                 >
                     <Button type="primary" htmlType="submit" className="bg-gray-500">
